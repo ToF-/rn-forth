@@ -8,4 +8,9 @@ t{
   1 decimal>roman
   romans count s" I" ?str
 }t
+." given 2 produce string II" cr
+t{ 
+  2 decimal>roman
+  romans count s" II" ?str
+}t
 bye
