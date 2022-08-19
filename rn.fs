@@ -1,10 +1,17 @@
 create romans 10 allot
 
 
+: init-romans
+  0 romans c! ;
+
+: c>romans ( c -- )
+  romans dup c@ 1+
+  2dup swap c!
+  + c! ;
+
 : decimal>roman ( u -- )
-  0 romans c!
+  init-romans
   0 do
-    romans dup c@ 1+ swap c!
-    [char] I romans 1+ i + c! 
+    [char] I c>romans
   loop ;
 
