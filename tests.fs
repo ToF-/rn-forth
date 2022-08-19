@@ -13,4 +13,9 @@ t{
   2 decimal>roman
   romans count s" II" ?str
 }t
+." given 30 produce string XXX" cr
+t{ 
+  30 decimal>roman
+  romans count s" XXX" ?str
+}t
 bye

@@ -11,7 +11,13 @@ create romans 10 allot
 
 : decimal>roman ( u -- )
   init-romans
-  0 do
-    [char] I c>romans
-  loop ;
+  dup 30 = if
+    10 / 0 do
+      [char] X c>romans
+    loop
+  else
+    0 do
+      [char] I c>romans
+    loop
+  then ;
 
