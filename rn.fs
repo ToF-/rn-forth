@@ -1,23 +1,6 @@
-create romans 10 allot
+create romans 
+char I c, char V c, char X c, char L c, char C c, char D c, char M c,
 
-
-: init-romans
-  0 romans c! ;
-
-: c>romans ( c -- )
-  romans dup c@ 1+
-  2dup swap c!
-  + c! ;
-
-: decimal>roman ( u -- )
-  init-romans
-  dup 30 = if
-    10 / 0 do
-      [char] X c>romans
-    loop
-  else
-    0 do
-      [char] I c>romans
-    loop
-  then ;
+: roman-digit ( u -- c )
+  romans + c@ ;
 
